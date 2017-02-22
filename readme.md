@@ -74,5 +74,9 @@ File paths are relative to the main file directory, therefore having `/foo/examp
 
 will have the same result `file` paths.
 
+## Compatibility
+
+Bases on [stack-trace](https://www.npmjs.com/package/stack-trace) library thus requires [V8](https://developers.google.com/v8) powered environment (*Node.js*, *Chromium*).
+
 ## License
 [MIT](license.md)
