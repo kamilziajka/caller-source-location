@@ -1,0 +1,42 @@
+{
+  "name": "caller-source-location",
+  "version": "0.1.0",
+  "description": "caller-source-location",
+  "main": "lib/index.js",
+  "author": "kazet",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "keywords": [
+    "caller",
+    "source",
+    "code",
+    "location",
+    "descriptor"
+  ],
+  "scripts": {
+    "build": "babel src -d ./lib",
+    "build-dev": "babel src -d ./lib -w",
+    "clean": "rimraf ./lib",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "6.23.0",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-preset-latest": "6.22.0",
+    "babel-preset-stage-0": "6.22.0",
+    "rimraf": "2.6.0"
+  },
+  "dependencies": {
+    "stack-trace": "0.0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazet15/caller-source-location.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kazet15/caller-source-location/issues"
+  },
+  "homepage": "https://github.com/kazet15/caller-source-location#readme"
+}
