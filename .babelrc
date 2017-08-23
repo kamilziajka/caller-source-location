@@ -1,4 +1,13 @@
 {
-  "presets": ["latest", "stage-0"],
+  "presets": [
+    [
+      "env",
+      {
+        "target": {
+          "node": "0.8"
+        }
+      }
+    ]
+  ],
   "plugins": ["add-module-exports"]
 }

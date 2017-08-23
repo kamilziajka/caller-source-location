@@ -45,9 +45,13 @@ Output
 To track `foo` function invocation location, pass `2` as `CallerSourceLocation` is nested twice inside `foo`
 
 ```js
-const foo = () => {
-  const bar () => {
-    console.log(CallerSourceLocation(2));
+const CallerSourceLocation = require('caller-source-location');
+
+const foo = function () {
+  const bar = function () {
+    const depth = 2;
+    const location = CallerSourceLocation(depth);
+    console.log(location);
   };
 
   bar();
@@ -60,8 +64,8 @@ foo();
 Output
 
 ```
-{ file: 'example.js', line: 9, column: 1 }
-{ file: 'example.js', line: 10, column: 1 }
+{ file: 'example.js', line: 13, column: 1 }
+{ file: 'example.js', line: 14, column: 1 }
 ```
 
 ### Relative paths
