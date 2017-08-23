@@ -1,6 +1,5 @@
-.idea
-node_modules
-npm-debug.log
-dist
-lib
-test
+/.vscode
+
+/node_modules
+/npm-debug.log*
+/lib
